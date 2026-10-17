@@ -9,7 +9,7 @@ on:
         type: string
       ipa_url:
         description: "URL to a decrypted Spotify IPA (optional — IPA build is skipped if empty)"
-        default: ""
+        default: "https://armconverter.com/decryptedappstore/download/324684580/com.spotify.client/9.1.90?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMDk3MzEwMyIsImlhdCI6MTc5MjI3NDkwNCwiZXhwIjoxNzkyMjg1NzA0LCJhcHBpZCI6MzI0Njg0NTgwLCJhcHB2ZXIiOiI5LjEuOTAifQ.LkfSnhCHREFW7QaW0R0zPfcAUKKDEXANP0qSRseDvQo"
         required: false
         type: string
       upload_method:
