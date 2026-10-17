@@ -32,10 +32,15 @@ class LyricsCellRTLHook: ClassHook<UITableViewCell> {
             } else if let textView = current as? UITextView, let text = textView.text, !text.isEmpty {
                 if text.isRTL {
                     textView.textAlignment = .right
-                    textView.setBaseWritingDirection(.rightToLeft, for: .writing)
+
+                    if let range = textView.textRange(
+                        from: textView.beginningOfDocument,
+                        to: textView.endOfDocument
+                    ) {
+                        textView.setBaseWritingDirection(.rightToLeft, for: range)
+                    }
                 }
             }
-
             queue.append(contentsOf: current.subviews)
         }
     }
